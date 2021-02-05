@@ -32,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/Sogrey/es6-webpack-babel/issues"
   },
-  "homepage": "https://github.com/Sogrey/es6-webpack-babel#readme"
+  "homepage": "https://github.com/Sogrey/es6-webpack-babel#readme",
+  "dependencies": {
+    "core-js": "^3.8.3"
+  }
 }

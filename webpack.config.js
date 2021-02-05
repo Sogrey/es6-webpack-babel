@@ -15,7 +15,7 @@ module.exports = {
                 options: {
                     presets: [
                         ["@babel/preset-env", {
-                            useBuiltIns: "usage" // 仅打包使用到的ES6+特性
+                            useBuiltIns: "entry" // usage 仅打包使用到的ES6+特性
                         }]
                     ]
                 }
