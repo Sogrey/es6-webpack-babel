@@ -4,8 +4,9 @@
   "description": "A simple ES6 Webpack Babel Starter Kit.",
   "main": "README.js",
   "scripts": {
-    "build:d": "webpack --mode=development",
-    "build": "webpack --mode=production",
+    "start": "node_modules/.bin/webpack-dev-server --output-public-path=/dist/  --mode development --progress --open --hot",
+    "build:d": "webpack --mode=development --progress",
+    "build": "webpack --mode=production --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,18 +23,21 @@
   "devDependencies": {
     "@babel/cli": "^7.12.13",
     "@babel/core": "^7.12.13",
+    "@babel/plugin-transform-runtime": "^7.12.15",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.12.13",
     "babel-loader": "^8.2.2",
     "babel-preset-env": "^1.7.0",
-    "webpack": "^5.20.1",
-    "webpack-cli": "^4.5.0"
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@babel/runtime": "^7.12.13"
   },
   "bugs": {
     "url": "https://github.com/Sogrey/es6-webpack-babel/issues"
   },
-  "homepage": "https://github.com/Sogrey/es6-webpack-babel#readme",
-  "dependencies": {
-    "core-js": "^3.8.3"
-  }
+  "homepage": "https://github.com/Sogrey/es6-webpack-babel#readme"
 }
