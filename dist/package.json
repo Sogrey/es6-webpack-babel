@@ -1,0 +1,25 @@
+{
+  "name": "es6-webpack-babel",
+  "version": "0.0.1",
+  "description": "A simple ES6 Webpack Babel Starter Kit.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sogrey/es6-webpack-babel.git"
+  },
+  "keywords": [
+    "ES6",
+    "webpack",
+    "babel"
+  ],
+  "author": "Sogrey",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@babel/runtime": "^7.12.13",
+    "core-js": "^3.8.3"
+  },
+  "bugs": {
+    "url": "https://github.com/Sogrey/es6-webpack-babel/issues"
+  },
+  "homepage": "https://github.com/Sogrey/es6-webpack-babel#readme"
+}
