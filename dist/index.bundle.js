@@ -992,11 +992,30 @@ function _loadAll() {
               url: 'https://api.github.com/'
             }, {
               url: 'https://api.github.com/users/sogrey'
-            }];
-            _context3.next = 3;
-            return Promise.all(fileInfos.map(loadData));
+            }]; // 兼容
 
-          case 3:
+            if (Promise && !Promise.allSettled) {
+              Promise.allSettled = function (promises) {
+                return Promise.all(promises.map(function (promise) {
+                  return promise.then(function (value) {
+                    return {
+                      state: 'fulfilled',
+                      value: value
+                    };
+                  })["catch"](function (reason) {
+                    return {
+                      state: 'rejected',
+                      reason: reason
+                    };
+                  });
+                }));
+              };
+            }
+
+            _context3.next = 4;
+            return Promise.allSettled(fileInfos.map(loadData));
+
+          case 4:
           case "end":
             return _context3.stop();
         }
